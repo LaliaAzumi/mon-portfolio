@@ -79,7 +79,7 @@ const projectsData: ProjectDetails[] = [
     tags: ["Bootstrap", "Flask", "MySQL"],
     codeUrl: "#",
     demoUrl: "#",
-    variant: "mechanical",
+    variant: "alchemical",
   },
   {
     id: "gift",
@@ -103,7 +103,7 @@ const projectsData: ProjectDetails[] = [
     tags: ["PHP", "MySQL", "Bootstrap"],
     codeUrl: "#",
     demoUrl: "#",
-    variant: "alchemical",
+    variant: "mechanical",
   },
   
 ]
