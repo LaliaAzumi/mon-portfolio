@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode colors */
+    --background: 36 33% 97%;
+    --foreground: 30 25% 15%;
+
+    --card: 36 33% 97%;
+    --card-foreground: 30 25% 15%;
+
+    --popover: 36 33% 97%;
+    --popover-foreground: 30 25% 15%;
+
+    --primary: 30 60% 50%;
+    --primary-foreground: 36 33% 97%;
+
+    --secondary: 120 15% 65%;
+    --secondary-foreground: 120 30% 15%;
+
+    --muted: 30 10% 90%;
+    --muted-foreground: 30 25% 35%;
+
+    --accent: 30 10% 90%;
+    --accent-foreground: 30 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 36 33% 97%;
+
+    --border: 30 25% 80%;
+    --input: 30 25% 80%;
+    --ring: 30 60% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom light theme colors */
+    --light-background: #f5f1e8;
+    --light-foreground: #3a2e1c;
+    --light-primary: #c17e3c;
+    --light-secondary: #a3c9a8;
+    --light-muted: #e8d0a9;
+    --light-border: #d4c19c;
+    --light-accent: #8b5a2b;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --background: 25 10% 15%;
+    --foreground: 36 33% 85%;
+
+    --card: 25 10% 15%;
+    --card-foreground: 36 33% 85%;
+
+    --popover: 25 10% 15%;
+    --popover-foreground: 36 33% 85%;
+
+    --primary: 30 60% 50%;
+    --primary-foreground: 36 33% 97%;
+
+    --secondary: 120 15% 40%;
+    --secondary-foreground: 120 10% 85%;
+
+    --muted: 25 10% 25%;
+    --muted-foreground: 36 33% 65%;
+
+    --accent: 25 10% 25%;
+    --accent-foreground: 36 33% 85%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 36 33% 97%;
+
+    --border: 25 10% 25%;
+    --input: 25 10% 25%;
+    --ring: 30 60% 50%;
+
+    /* Custom dark theme colors */
+    --dark-background: #2a2522;
+    --dark-foreground: #e8d0a9;
+    --dark-primary: #c17e3c;
+    --dark-secondary: #a3c9a8;
+    --dark-muted: #8b5a2b;
+    --dark-border: #6a4423;
+    --dark-accent: #1d3e2f;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .animate-spin-slow {
+    animation: spin 10s linear infinite;
+  }
+
+  .animate-spin-reverse {
+    animation: spin-reverse 7s linear infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
