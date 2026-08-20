@@ -4,143 +4,106 @@
 
 @layer base {
   :root {
-    /* Light mode colors */
-    --background: 36 33% 97%;
-    --foreground: 30 25% 15%;
-
-    --card: 36 33% 97%;
-    --card-foreground: 30 25% 15%;
-
-    --popover: 36 33% 97%;
-    --popover-foreground: 30 25% 15%;
-
-    --primary: 30 60% 50%;
-    --primary-foreground: 36 33% 97%;
-
-    --secondary: 120 15% 65%;
-    --secondary-foreground: 120 30% 15%;
-
-    --muted: 30 10% 90%;
-    --muted-foreground: 30 25% 35%;
-
-    --accent: 30 10% 90%;
-    --accent-foreground: 30 25% 15%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 36 33% 97%;
-
-    --border: 30 25% 80%;
-    --input: 30 25% 80%;
-    --ring: 30 60% 50%;
-
-    --radius: 0.5rem;
-
-    /* Custom light theme colors */
-    --light-background: #f5f1e8;
-    --light-foreground: #3a2e1c;
-    --light-primary: #c17e3c;
-    --light-secondary: #a3c9a8;
-    --light-muted: #e8d0a9;
-    --light-border: #d4c19c;
-    --light-accent: #8b5a2b;
+    --background: 42 43% 96%;
+    --foreground: 222 24% 11%;
+    --card: 42 43% 98%;
+    --card-foreground: 222 24% 11%;
+    --popover: 42 43% 98%;
+    --popover-foreground: 222 24% 11%;
+    --primary: 8 78% 58%;
+    --primary-foreground: 42 43% 98%;
+    --secondary: 222 24% 11%;
+    --secondary-foreground: 42 43% 98%;
+    --muted: 40 24% 89%;
+    --muted-foreground: 222 12% 42%;
+    --accent: 39 91% 64%;
+    --accent-foreground: 222 24% 11%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 42 43% 98%;
+    --border: 222 12% 78%;
+    --input: 222 12% 78%;
+    --ring: 8 78% 58%;
+    --radius: 1rem;
   }
-
   .dark {
-    /* Dark mode colors */
-    --background: 25 10% 15%;
-    --foreground: 36 33% 85%;
-
-    --card: 25 10% 15%;
-    --card-foreground: 36 33% 85%;
-
-    --popover: 25 10% 15%;
-    --popover-foreground: 36 33% 85%;
-
-    --primary: 30 60% 50%;
-    --primary-foreground: 36 33% 97%;
-
-    --secondary: 120 15% 40%;
-    --secondary-foreground: 120 10% 85%;
-
-    --muted: 25 10% 25%;
-    --muted-foreground: 36 33% 65%;
-
-    --accent: 25 10% 25%;
-    --accent-foreground: 36 33% 85%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 36 33% 97%;
-
-    --border: 25 10% 25%;
-    --input: 25 10% 25%;
-    --ring: 30 60% 50%;
-
-    /* Custom dark theme colors */
-    --dark-background: #2a2522;
-    --dark-foreground: #e8d0a9;
-    --dark-primary: #c17e3c;
-    --dark-secondary: #a3c9a8;
-    --dark-muted: #8b5a2b;
-    --dark-border: #6a4423;
-    --dark-accent: #1d3e2f;
+    --background: 222 24% 11%;
+    --foreground: 42 43% 96%;
+    --card: 222 20% 15%;
+    --card-foreground: 42 43% 96%;
+    --popover: 222 20% 15%;
+    --popover-foreground: 42 43% 96%;
+    --primary: 8 78% 58%;
+    --primary-foreground: 42 43% 98%;
+    --secondary: 42 43% 96%;
+    --secondary-foreground: 222 24% 11%;
+    --muted: 222 16% 22%;
+    --muted-foreground: 42 18% 72%;
+    --accent: 39 91% 64%;
+    --accent-foreground: 222 24% 11%;
+    --border: 222 12% 30%;
+    --input: 222 12% 30%;
+    --ring: 8 78% 58%;
   }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground transition-colors duration-300;
-  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; background: hsl(var(--background)); }
+  body { @apply bg-background text-foreground transition-colors duration-300; font-family: Arial, Helvetica, sans-serif; }
 }
 
 @layer utilities {
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
-  .animation-delay-1000 {
-    animation-delay: 1000ms;
-  }
-
-  .animate-spin-slow {
-    animation: spin 10s linear infinite;
-  }
-
-  .animate-spin-reverse {
-    animation: spin-reverse 7s linear infinite;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes spin-reverse {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-  }
-
-  @keyframes pulse {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+  .animate-spin-slow { animation: spin 10s linear infinite; }
+  .animate-spin-reverse { animation: spin-reverse 7s linear infinite; }
+  .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes spin-reverse { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+  @keyframes reveal-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 }
+
+/* Voices United-inspired editorial layer */
+main, main > section { background: hsl(var(--background)) !important; }
+main > section:nth-of-type(even) { background: hsl(40 28% 91% / .55) !important; }
+main > section > .container { max-width: 1180px; }
+main > section > .container > div:first-child { animation: reveal-up .8s cubic-bezier(.22,1,.36,1) both; }
+main h1, main h2, main h3 { font-family: Arial, Helvetica, sans-serif !important; letter-spacing: -.055em !important; color: hsl(var(--foreground)) !important; }
+main h1 { font-size: clamp(3.6rem, 9vw, 8.2rem) !important; line-height: .9 !important; max-width: 9ch; }
+main h1 span { color: hsl(var(--primary)) !important; font-size: inherit !important; margin: 0 !important; }
+main p, main li, main a, main button { font-family: Arial, Helvetica, sans-serif !important; }
+main section .font-serif { font-family: Arial, Helvetica, sans-serif !important; }
+main .rounded-full { border-radius: 999px !important; }
+main button, main a[class*="bg-"] { border-radius: 999px !important; }
+main section > .container > .flex:first-child { text-align: left !important; align-items: flex-start !important; }
+main section > .container > .flex:first-child h2 { font-size: clamp(2.4rem, 5vw, 5rem) !important; line-height: .95 !important; max-width: 11ch; }
+main section > .container > .flex:first-child p { max-width: 560px; font-size: 1.1rem; line-height: 1.55; }
+main section .grid { position: relative; }
+main section .grid > * { animation: reveal-up .7s cubic-bezier(.22,1,.36,1) both; }
+main section .grid > *:nth-child(2) { animation-delay: 100ms; }
+main section .grid > *:nth-child(3) { animation-delay: 180ms; }
+main section .grid > *:nth-child(4) { animation-delay: 260ms; }
+main section .grid > *:nth-child(5) { animation-delay: 340ms; }
+main section .shadow-md, main section .shadow-lg { box-shadow: 0 18px 50px hsl(222 24% 11% / .09) !important; }
+main section .border { border-color: hsl(var(--foreground) / .14) !important; }
+
+header { background: hsl(var(--background) / .78) !important; border-color: hsl(var(--foreground) / .12) !important; backdrop-filter: blur(18px); }
+header > div { max-width: 1180px; }
+header a, header button { font-family: Arial, Helvetica, sans-serif !important; }
+header a[href="#contact"] { background: hsl(var(--foreground)) !important; color: hsl(var(--background)) !important; border-radius: 999px !important; padding-inline: 1.25rem; }
+header a[href="#contact"]:hover { background: hsl(var(--primary)) !important; color: white !important; }
+
+@media (max-width: 767px) {
+  main h1 { font-size: clamp(3.35rem, 16vw, 5rem) !important; }
+  main section > .container > .flex:first-child { text-align: left !important; }
+  header { padding-block: .75rem !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+::selection { background: hsl(var(--primary)); color: white; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--foreground) / .28); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary)); }
