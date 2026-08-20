@@ -1,10 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Geist } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] })
+const geist = Geist({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Porfolio - Iavo Lalia",
@@ -19,8 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider defaultTheme="dark" storageKey="codex-theme">
+      <body className={`${geist.className} font-sans`}>
+        <ThemeProvider defaultTheme="light" storageKey="codex-theme">
           {children}
         </ThemeProvider>
       </body>
