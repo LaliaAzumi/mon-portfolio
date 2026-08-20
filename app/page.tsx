@@ -82,32 +82,6 @@ const projectsData: ProjectDetails[] = [
     variant: "alchemical",
   },
   {
-    id: "talesync",
-    title: "TaleSync – Application web de lecture intelligente et adaptative",
-    description:
-      "Solution web Django/React dédiée à une lecture adaptée aux personnes en situation de handicap, notamment malvoyantes ou ayant un handicap moteur.",
-    longDescription:
-      "TaleSync combine l'API Google Gemini et Tesseract OCR pour simplifier les documents, générer des synthèses automatiques et proposer une expérience visuelle plus accessible. Une brique d'intelligence artificielle analyse aussi les erreurs de clic, les usages du zoom et d'autres interactions afin d'orienter automatiquement l'adaptation de l'interface grâce à un arbre de décision.",
-    features: [
-      "Lecture intelligente et adaptative pour les profils visuel et moteur",
-      "Extraction de texte avec Tesseract OCR",
-      "Simplification et synthèse automatique avec Google Gemini",
-      "Détection des besoins d'accessibilité à partir des interactions",
-      "Adaptation de l'ergonomie visuelle avec un arbre de décision",
-    ],
-    technologies: ["Django", "React", "Python", "Google Gemini API", "Tesseract OCR", "UX/UI Accessibilité", "Arbre de décision"],
-    images: [
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync1-HswqNwZzl3Fc8XeUIAuGZGGdqFAF7z.png", alt: "TaleSync, écran de bibliothèque accessible" },
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync2-mgWPvkc2TTTeK74DLiFMNGUfvkIyUr.png", alt: "TaleSync, interface de lecture adaptative" },
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync3-9S68LTnXJzzgjzRpAABq7LngIHg2zw.png", alt: "TaleSync, commandes vocales et navigation" },
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync4-40aBchOzjgg7vxbnmd9ldgm9OUSTiD.png", alt: "TaleSync, mode visuel à contraste élevé" },
-    ],
-    tags: ["Django", "React", "Python", "Gemini API", "Tesseract OCR", "Accessibilité", "Arbre de décision"],
-    codeUrl: "#",
-    demoUrl: "#",
-    variant: "alchemical",
-  },
-  {
     id: "gift",
     title: "G-IFT",
     description: "Site de gestion des impôts fonciers sur le terrain pour la DSI",
@@ -210,7 +184,7 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <Badge className="inline-block dark:bg-[#1D3E2F]/50 dark:text-[#A3C9A8] dark:border-[#1D3E2F] bg-[#A3C9A8]/50 text-[#1D3E2F] border-[#A3C9A8] hover:bg-[#1D3E2F]/70 font-serif">
-                    Étudiante • Master 1 en informatique appliquée à la gestion d'entreprise
+                    Etudiante • L3 Informatique
                   </Badge>
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl dark:text-[#E8D0A9] text-[#6A4423] font-serif drop-shadow-md">
                     <span className="dark:text-[#C17E3C] text-[#8B5A2B] text-7xl mr-2 font-bold">I</span>avo{" "}
@@ -318,11 +292,35 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-10">
-              <ExperienceCard title="Consultante" company="PJL — Projet Jeune Leader" location="Madagascar" period="Juin 2026" description="Imputation de données depuis KoboToolbox vers Google Sheets et traitement de données physiques." skills={["KoboToolbox", "Google Sheets", "Analyse de données"]} variant="mechanical" />
-              <ExperienceCard title="Conseillère Client" company="Odity Andraharo" location="Antananarivo, Madagascar" period="Septembre 2025 - Avril 2026" description="Analyse et traitement des opérations back office, appels sortants, gestion des tickets et suivi des dossiers clients jusqu'à leur résolution." skills={["Back office", "Relation client", "Suivi de dossiers"]} variant="alchemical" />
-              <ExperienceCard title="Stagiaire" company="S2M" location="Antananarivo, Madagascar" period="Décembre 2024 - Mars 2025" description="Développement et conception d'une application web de gestion de parc automobile." skills={["Django", "MySQL", "Python"]} variant="mechanical" />
-              <ExperienceCard title="Stagiaire" company="DSID" location="Antananarivo, Madagascar" period="Mars 2024 - Mai 2024" description="Création et conception d'une application web de gestion des impôts fonciers sur les terrains (G-IFT)." skills={["PHP", "MySQL", "Bootstrap"]} variant="alchemical" />
-              <ExperienceCard title="Stagiaire" company="Randevteam" location="Antananarivo, Madagascar" period="Juin 2023 - Août 2023" description="Intégration de sites e-commerce CMS et gestion des produits." skills={["Prestashop", "WordPress", "CMS"]} variant="mechanical" />
+              <ExperienceCard
+                title="Stagiaire"
+                company="S2M Madagascar"
+                location="Antananarivo, Madagascar"
+                period="Décembre 2024 - Mars 2025"
+                description="Développement d'une application web de gestion de flotte automobile intégrant un système de prédiction de maintenance basé sur l'apprentissage automatique."
+                skills={["Django", "MySQL", "Bootstrap", "Ajax/JQuery", "RandomForest"]}
+                variant="mechanical"
+              />
+
+              <ExperienceCard
+                title="Stagiaire"
+                company="DSID"
+                location="Antananarivo, Madagascar"
+                period="Mars 2024 - Mai 2024"
+                description="Conception et développement d'un système de gestion des impôts fonciers sur les terrains, facilitant la déclaration et le suivi des paiements."
+                skills={["PHP", "MySQL", "Bootstrap", "jQuery"]}
+                variant="alchemical"
+              />
+
+              <ExperienceCard
+                title="Stagiaire"
+                company="Randevteam"
+                location="Antananarivo, Madagascar"
+                period="Juin 2023 - Août 2023"
+                description="Intégration site e-commerce cms et gestion des produits dans le site."
+                skills={["Prestashop", "WordPress", "Bootstrap", "Php"]}
+                variant="mechanical"
+              />
             </div>
           </div>
         </section>
@@ -445,18 +443,11 @@ export default function Home() {
             </div>
             <div className="mx-auto max-w-3xl space-y-8 py-12">
               <TimelineItem
-                title="Master 1 — Informatique appliquée à la gestion d'entreprise"
-                date="ESMIA | 2026 — En cours"
-                description="Après une Licence en Informatique Risque et Décision obtenue à l'ESMIA (2022–2025), je poursuis mon parcours en Master 1."
+                title="Licence Informatique"
+                date="Université ESMIA | 2022 - Présent"
+                description="Spécialisation en développement web, mobile et intelligence artificielle. Projets académiques en programmation orientée objet, bases de données et développement d'applications web."
                 badge="En cours"
                 variant="mechanical"
-              />
-              <TimelineItem
-                title="Licence — Informatique, Risque et Décision"
-                date="ESMIA | 2022 — 2025"
-                description="Formation en informatique appliquée, analyse des risques et aide à la décision."
-                badge="Diplôme obtenu"
-                variant="alchemical"
               />
               <TimelineItem
                 title="Baccalauréat Scientifique"
