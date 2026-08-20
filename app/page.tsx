@@ -452,9 +452,9 @@ export default function Home() {
                 variant="mechanical"
               />
               <TimelineItem
-                title="Baccalauréat Scientifique"
-                date="Lycée Jean Joseph RABEARIVELO | 2019 - 2021"
-                description="Série C. Mention Assez Bien."
+                title="Licence en Informatique Risque et Décision"
+                date="ESMIA | 2022 - 2025"
+                description="Licence en Informatique Risque et Décision"
                 variant="alchemical" badge={undefined}              />
               <TimelineItem
                 title="Certifications"
@@ -466,6 +466,12 @@ export default function Home() {
                 </ul>}
                 variant="mechanical" date={undefined} badge={undefined}   
                     />
+              <TimelineItem
+                title="Baccalauréat Scientifique"
+                date="Lycée Jean Joseph RABEARIVELO | 2019 - 2021"
+                description="Série C. Mention Assez Bien."
+                variant="alchemical" badge={undefined}              />
+              
             </div>
           </div>
         </section>
