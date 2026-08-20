@@ -82,12 +82,12 @@ const projectsData: ProjectDetails[] = [
     variant: "alchemical",
   },
   {
-    id: "accessidoc",
-    title: "AccessiDoc – Application web de lecture intelligente et adaptative",
+    id: "talesync",
+    title: "TaleSync – Application web de lecture intelligente et adaptative",
     description:
       "Solution web Django/React dédiée à une lecture adaptée aux personnes en situation de handicap, notamment malvoyantes ou ayant un handicap moteur.",
     longDescription:
-      "AccessiDoc combine l'API Google Gemini et Tesseract OCR pour simplifier les documents, générer des synthèses automatiques et proposer une expérience visuelle plus accessible. Une brique d'intelligence artificielle analyse aussi les erreurs de clic, les usages du zoom et d'autres interactions afin d'orienter automatiquement l'adaptation de l'interface grâce à un arbre de décision.",
+      "TaleSync combine l'API Google Gemini et Tesseract OCR pour simplifier les documents, générer des synthèses automatiques et proposer une expérience visuelle plus accessible. Une brique d'intelligence artificielle analyse aussi les erreurs de clic, les usages du zoom et d'autres interactions afin d'orienter automatiquement l'adaptation de l'interface grâce à un arbre de décision.",
     features: [
       "Lecture intelligente et adaptative pour les profils visuel et moteur",
       "Extraction de texte avec Tesseract OCR",
@@ -97,10 +97,10 @@ const projectsData: ProjectDetails[] = [
     ],
     technologies: ["Django", "React", "Python", "Google Gemini API", "Tesseract OCR", "UX/UI Accessibilité", "Arbre de décision"],
     images: [
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync1-HswqNwZzl3Fc8XeUIAuGZGGdqFAF7z.png", alt: "AccessiDoc, écran de bibliothèque accessible" },
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync2-mgWPvkc2TTTeK74DLiFMNGUfvkIyUr.png", alt: "AccessiDoc, interface de lecture adaptative" },
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync3-9S68LTnXJzzgjzRpAABq7LngIHg2zw.png", alt: "AccessiDoc, commandes vocales et navigation" },
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync4-40aBchOzjgg7vxbnmd9ldgm9OUSTiD.png", alt: "AccessiDoc, mode visuel à contraste élevé" },
+      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync1-HswqNwZzl3Fc8XeUIAuGZGGdqFAF7z.png", alt: "TaleSync, écran de bibliothèque accessible" },
+      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync2-mgWPvkc2TTTeK74DLiFMNGUfvkIyUr.png", alt: "TaleSync, interface de lecture adaptative" },
+      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync3-9S68LTnXJzzgjzRpAABq7LngIHg2zw.png", alt: "TaleSync, commandes vocales et navigation" },
+      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/talesync4-40aBchOzjgg7vxbnmd9ldgm9OUSTiD.png", alt: "TaleSync, mode visuel à contraste élevé" },
     ],
     tags: ["Django", "React", "Python", "Gemini API", "Tesseract OCR", "Accessibilité", "Arbre de décision"],
     codeUrl: "#",
@@ -450,6 +450,13 @@ export default function Home() {
                 description="Après une Licence en Informatique Risque et Décision obtenue à l'ESMIA (2022–2025), je poursuis mon parcours en Master 1."
                 badge="En cours"
                 variant="mechanical"
+              />
+              <TimelineItem
+                title="Licence — Informatique, Risque et Décision"
+                date="ESMIA | 2022 — 2025"
+                description="Formation en informatique appliquée à l'analyse des risques, à la prise de décision et au développement de solutions numériques."
+                badge="Diplôme obtenu"
+                variant="alchemical"
               />
               <TimelineItem
                 title="Baccalauréat Scientifique"
