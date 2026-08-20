@@ -82,12 +82,12 @@ const projectsData: ProjectDetails[] = [
     variant: "alchemical",
   },
   {
-    id: "accessidoc",
-    title: "AccessiDoc – Application web de lecture intelligente et adaptative",
+    id: "TaleSync",
+    title: "TaleSync – Application web de lecture intelligente et adaptative",
     description:
       "Solution web Django/React dédiée à une lecture adaptée aux personnes en situation de handicap, notamment malvoyantes ou ayant un handicap moteur.",
     longDescription:
-      "AccessiDoc combine l'API Google Gemini et Tesseract OCR pour simplifier les documents, générer des synthèses automatiques et proposer une expérience visuelle plus accessible. Une brique d'intelligence artificielle analyse aussi les erreurs de clic, les usages du zoom et d'autres interactions afin d'orienter automatiquement l'adaptation de l'interface grâce à un arbre de décision.",
+      "TaleSync combine l'API Google Gemini et Tesseract OCR pour simplifier les documents, générer des synthèses automatiques et proposer une expérience visuelle plus accessible. Une brique d'intelligence artificielle analyse aussi les erreurs de clic, les usages du zoom et d'autres interactions afin d'orienter automatiquement l'adaptation de l'interface grâce à un arbre de décision.",
     features: [
       "Lecture intelligente et adaptative pour les profils visuel et moteur",
       "Extraction de texte avec Tesseract OCR",
